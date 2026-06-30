@@ -64,7 +64,7 @@ script = ExtResource("5_lo833")
 position = Vector2(79, 246)
 
 [node name="Area2D2" parent="sceen elemnts/melons" unique_id=960482946 instance=ExtResource("4_p6jff")]
-position = Vector2(391, 453)
+position = Vector2(447, 453)
 
 [node name="Area2D3" parent="sceen elemnts/melons" unique_id=2116543212 instance=ExtResource("4_p6jff")]
 position = Vector2(888, 355)
@@ -86,7 +86,6 @@ position = Vector2(1851, 209)
 
 [node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_0ei1v")]
 position = Vector2(1775, 504)
-target_sceen = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
 
