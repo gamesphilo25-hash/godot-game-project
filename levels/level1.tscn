@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/game_manger.gd" id="5_lo833"]
 [ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_0ei1v"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_edc2v"]
+[ext_resource type="PackedScene" uid="uid://o7p8kfgowou6" path="res://levels/level2.tscn" id="7_omn1t"]
 [ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="8_p6jff"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
@@ -86,7 +87,7 @@ position = Vector2(1851, 209)
 
 [node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_0ei1v")]
 position = Vector2(1775, 504)
-target_sceen = null
+target_sceen = ExtResource("7_omn1t")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
 
