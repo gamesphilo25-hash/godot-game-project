@@ -1,0 +1,129 @@
+[gd_scene format=4 uid="uid://dluuumsvcvapp"]
+
+[ext_resource type="Texture2D" uid="uid://4itu1ddygm6w" path="res://world/back ground/Green.png" id="1_hxib8"]
+[ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/new_tile_set.tres" id="2_0ei1v"]
+[ext_resource type="PackedScene" uid="uid://csfr1abmxaaih" path="res://plyer/sceens/plyer.tscn" id="3_edc2v"]
+[ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="4_p6jff"]
+[ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/game_manger.gd" id="5_lo833"]
+[ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_0ei1v"]
+[ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_edc2v"]
+[ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="8_p6jff"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
+bg_color = Color(0.50980395, 1, 0.19607843, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
+shadow_size = 5
+
+[node name="Node" type="Node" unique_id=31593673]
+
+[node name="sceen elemnts" type="Node" parent="." unique_id=166305142]
+
+[node name="TextureRect" type="TextureRect" parent="sceen elemnts" unique_id=986876102]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -342.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hxib8")
+stretch_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="sceen elemnts" unique_id=2107733799]
+texture_filter = 1
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAAAAwAAAAHAAAAAAABAAwAAAAHAAAAAAACAAwAAAAHAAAAAAADAAwAAAAHAAAAAAAEAAwAAAAHAAAAAAAFAAwAAAAHAAAAAAAGAAwAAAAHAAAAAAAHAAwAAAAHAAAAAAAIAAwAAAAHAAAAAAAJAAwAAAAHAAAAAAAKAAwAAAAHAAAAAAALAAwAAAAHAAAAAAAMAAwAAAAHAAAAAAANAAwAAAAHAAAAAAAOAAwAAAAHAAAAAAAPAAwAAAAHAAAAAAAQAAwAAAAHAAAAAAARAAwAAAAHAAAAAAASAAwAAAAHAAAAAAATAAwAAAAHAAAAAAAUAAwAAAAHAAAAAAAVAAwAAAAHAAAAAAAWAAwAAAAHAAAAAAAXAAwAAAAHAAAAAAAYAAwAAAAHAAAAAAAZAAwAAAAHAAAAAAAaAAwAAAAHAAAAAAAbAAwAAAAHAAAAAAAcAAwAAAAHAAAAAAAdAAwAAAAHAAAAAAAeAAwAAAAHAAAAAAAfAAwAAAAHAAAAAAAgAAwAAAAHAAAAAAAhAAwAAAAHAAAAAAAiAAwAAAAHAAAAAAAjAAwAAAAHAAAAAAAkAAwAAAAHAAAAAAAlAAwAAAAHAAAAAAAmAAwAAAAHAAAAAAD//wwAAAAIAAEAAAD//wsAAAAIAAEAAAD//woAAAAIAAEAAAD//wkAAAAIAAEAAAD//wgAAAAIAAEAAAD//wcAAAAIAAEAAAD//wYAAAAIAAEAAAD//wUAAAAIAAEAAAD//wQAAAAIAAEAAAD//wMAAAAIAAEAAAD//wIAAAAIAAEAAAD//wEAAAAIAAEAAAD//wAAAAAIAAEAAAAAAP//AAAHAAIAAAABAP//AAAHAAIAAAACAP//AAAHAAIAAAADAP//AAAHAAIAAAAEAP//AAAHAAIAAAAFAP//AAAHAAIAAAAGAP//AAAHAAIAAAAHAP//AAAHAAIAAAAIAP//AAAHAAIAAAAMAP//AAAHAAIAAAANAP//AAAHAAIAAAAJAP//AAAHAAIAAAAKAP//AAAHAAIAAAALAP//AAAHAAIAAAAOAP//AAAHAAIAAAAPAP//AAAHAAIAAAAQAP//AAAHAAIAAAARAP//AAAHAAIAAAASAP//AAAHAAIAAAATAP//AAAHAAIAAAAUAP//AAAHAAIAAAAVAP//AAAHAAIAAAAWAP//AAAHAAIAAAAXAP//AAAHAAIAAAAYAP//AAAHAAIAAAAZAP//AAAHAAIAAAAaAP//AAAHAAIAAAAbAP//AAAHAAIAAAAcAP//AAAHAAIAAAAdAP//AAAHAAIAAAAeAP//AAAHAAIAAAAfAP//AAAHAAIAAAAgAP//AAAHAAIAAAAhAP//AAAHAAIAAAAiAP//AAAHAAIAAAAjAP//AAAHAAIAAAAkAP//AAAHAAIAAAAlAP//AAAHAAIAAAAmAP//AAAHAAIAAAAnAAAAAAAGAAEAAAAnAAEAAAAGAAEAAAAnAAIAAAAGAAEAAAAnAAMAAAAGAAEAAAAnAAQAAAAGAAEAAAAnAAUAAAAGAAEAAAAnAAYAAAAGAAEAAAAnAAcAAAAGAAEAAAAnAAgAAAAGAAEAAAAnAAkAAAAGAAEAAAAnAAoAAAAGAAEAAAAnAAsAAAAGAAEAAAAnAP//AAAHAAEAAAD/////AAAHAAEAAAAnAAwAAAAGAAEAAAABAAYAAAAHAAAAAAABAAcAAAAHAAEAAAABAAgAAAAHAAEAAAABAAkAAAAJAAAAAAABAAoAAAAJAAEAAAABAAsAAAAHAAIAAAACAAYAAAAIAAAAAAACAAcAAAAIAAEAAAACAAgAAAAGAAAAAAACAAkAAAAKAAAAAAACAAoAAAAKAAEAAAACAAsAAAAHAAIAAAADAAgAAAAIAAAAAAADAAkAAAAIAAEAAAADAAoAAAAIAAEAAAADAAsAAAAIAAIAAAAAAAYAAAAGAAAAAAAAAAcAAAAGAAEAAAAAAAgAAAAGAAEAAAAAAAkAAAAGAAEAAAAAAAoAAAAGAAEAAAAAAAsAAAAGAAIAAAAHAAoAAAAGAAAAAAAIAAoAAAAHAAAAAAAJAAoAAAAIAAAAAAAMAAkAAAAGAAAAAAAMAAoAAAAGAAEAAAANAAkAAAAHAAAAAAANAAoAAAAHAAEAAAAOAAkAAAAIAAAAAAAOAAoAAAAIAAEAAAAHAAsAAAAGAAIAAAAIAAsAAAAHAAIAAAAJAAsAAAAIAAIAAAAKAAoAAAARAAEAAAALAAoAAAATAAEAAAAMAAsAAAAGAAIAAAANAAsAAAAHAAIAAAAOAAsAAAAIAAIAAAAbAAoAAAAGAAAAAAAcAAoAAAAIAAAAAAAbAAsAAAAGAAIAAAAcAAsAAAAHAAIAAAAdAAsAAAAHAAIAAAAdAAoAAAAHAAEAAAAdAAkAAAAGAAEAAAAdAAgAAAAGAAEAAAAeAAgAAAAGAAAAAAAeAAkAAAAHAAEAAAAeAAoAAAAHAAEAAAAeAAsAAAAHAAIAAAAfAAsAAAAHAAIAAAAfAAoAAAAHAAEAAAAfAAkAAAAHAAEAAAAfAAgAAAAIAAAAAAAgAAkAAAAHAAEAAAAgAAgAAAAHAAEAAAAgAAcAAAAGAAEAAAAhAAcAAAAIAAEAAAAhAAgAAAAIAAEAAAAgAAYAAAAGAAAAAAAhAAYAAAAIAAAAAAAhAAkAAAAIAAEAAAAgAAoAAAAHAAEAAAAgAAsAAAAHAAIAAAAhAAsAAAAIAAIAAAAhAAoAAAAIAAEAAAAcAAcAAAAHAAIAAAAdAAcAAAAIAAEAAAAbAAcAAAAGAAIAAAAbAAYAAAAGAAAAAAAcAAYAAAAHAAAAAAAdAAYAAAAIAAAAAAAZAAUAAAATAAEAAAAYAAUAAAARAAEAAAAUAAMAAAAGAAAAAAAVAAMAAAAIAAAAAAAUAAQAAAAGAAIAAAAVAAQAAAAIAAIAAAAOAAQAAAARAAEAAAAPAAQAAAASAAEAAAAQAAQAAAATAAEAAAAKAAQAAAAGAAAAAAAKAAUAAAAGAAIAAAALAAQAAAAIAAAAAAALAAUAAAAIAAIAAAAiAAgAAAAIAAAAAAAiAAkAAAAIAAIAAAAmAAUAAAAGAAAAAAAmAAYAAAAGAAIAAAAPAAsAAAAIAAAAAAARAAkAAAAGAAIAAAASAAkAAAAHAAIAAAATAAkAAAAIAAIAAAARAAgAAAAGAAAAAAASAAgAAAAHAAAAAAATAAgAAAAIAAAAAAAWAAcAAAAGAAAAAAAWAAgAAAAGAAIAAAAXAAcAAAAIAAAAAAAXAAgAAAAIAAIAAAA=")
+tile_set = ExtResource("2_0ei1v")
+
+[node name="CharacterBody2D" parent="sceen elemnts" unique_id=162145697 instance=ExtResource("3_edc2v")]
+position = Vector2(255, 508)
+
+[node name="Camera2D" type="Camera2D" parent="sceen elemnts/CharacterBody2D" unique_id=49954408]
+zoom = Vector2(1.5, 1.5)
+limit_left = -48
+limit_top = -48
+limit_right = 1914
+limit_bottom = 624
+
+[node name="game manger" type="Node" parent="sceen elemnts" unique_id=100583520]
+unique_name_in_owner = true
+script = ExtResource("5_lo833")
+
+[node name="melons" type="Node" parent="sceen elemnts" unique_id=1713894258]
+
+[node name="Area2D" parent="sceen elemnts/melons" unique_id=1856683621 instance=ExtResource("4_p6jff")]
+position = Vector2(79, 246)
+
+[node name="Area2D2" parent="sceen elemnts/melons" unique_id=960482946 instance=ExtResource("4_p6jff")]
+position = Vector2(391, 453)
+
+[node name="Area2D3" parent="sceen elemnts/melons" unique_id=2116543212 instance=ExtResource("4_p6jff")]
+position = Vector2(888, 355)
+
+[node name="Area2D4" parent="sceen elemnts/melons" unique_id=1768823074 instance=ExtResource("4_p6jff")]
+position = Vector2(1105, 313)
+
+[node name="Area2D5" parent="sceen elemnts/melons" unique_id=263387609 instance=ExtResource("4_p6jff")]
+position = Vector2(529, 160)
+
+[node name="Area2D6" parent="sceen elemnts/melons" unique_id=785138518 instance=ExtResource("4_p6jff")]
+position = Vector2(1017, 102)
+
+[node name="Area2D7" parent="sceen elemnts/melons" unique_id=1243555332 instance=ExtResource("4_p6jff")]
+position = Vector2(1484, 338)
+
+[node name="Area2D8" parent="sceen elemnts/melons" unique_id=86366274 instance=ExtResource("4_p6jff")]
+position = Vector2(1851, 209)
+
+[node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_0ei1v")]
+position = Vector2(1775, 504)
+target_sceen = null
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
+
+[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1937296898]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 262.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ffhad")
+
+[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=804054561]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 1.0
+offset_right = 32.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_edc2v")
+theme_override_font_sizes/font_size = 28
+text = "POINTS:0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=826673763]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -27.0
+offset_right = 72.0
+offset_bottom = 26.0
+grow_vertical = 2
+texture = ExtResource("8_p6jff")
+expand_mode = 1

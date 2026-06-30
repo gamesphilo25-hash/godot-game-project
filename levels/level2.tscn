@@ -1,0 +1,145 @@
+[gd_scene format=4 uid="uid://o7p8kfgowou6"]
+
+[ext_resource type="Texture2D" uid="uid://bu0wbi7tacnuq" path="res://world/back ground/Brown.png" id="1_76ugp"]
+[ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/new_tile_set.tres" id="2_55gdq"]
+[ext_resource type="PackedScene" uid="uid://csfr1abmxaaih" path="res://plyer/sceens/plyer.tscn" id="3_crte6"]
+[ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/game_manger.gd" id="4_hq01p"]
+[ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="5_fjysh"]
+[ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_bcewn"]
+[ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_6mfmt"]
+[ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="8_qegch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
+bg_color = Color(0.50980395, 1, 0.19607843, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
+shadow_size = 5
+
+[node name="Node" type="Node" unique_id=31593673]
+
+[node name="sceen elemnts" type="Node" parent="." unique_id=166305142]
+
+[node name="TextureRect" type="TextureRect" parent="sceen elemnts" unique_id=986876102]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -103.0
+offset_right = 888.0
+offset_bottom = -347.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_76ugp")
+stretch_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="sceen elemnts" unique_id=2107733799]
+texture_filter = 1
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("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")
+tile_set = ExtResource("2_55gdq")
+
+[node name="CharacterBody2D" parent="sceen elemnts" unique_id=162145697 instance=ExtResource("3_crte6")]
+position = Vector2(197, 351)
+
+[node name="Camera2D" type="Camera2D" parent="sceen elemnts/CharacterBody2D" unique_id=484815252]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = -144
+limit_right = 2832
+limit_bottom = 624
+
+[node name="game manger" type="Node" parent="sceen elemnts" unique_id=100583520]
+unique_name_in_owner = true
+script = ExtResource("4_hq01p")
+
+[node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_bcewn")]
+position = Vector2(2689, 408)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
+
+[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1937296898]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 268.0
+offset_bottom = 95.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ffhad")
+
+[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=804054561]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 1.0
+offset_right = 32.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_6mfmt")
+theme_override_font_sizes/font_size = 28
+text = "POINTS:0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=826673763]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -27.0
+offset_right = 72.0
+offset_bottom = 26.0
+grow_vertical = 2
+texture = ExtResource("8_qegch")
+expand_mode = 1
+
+[node name="collecabels" type="Node" parent="." unique_id=710241616]
+
+[node name="Area2D" parent="collecabels" unique_id=1856683621 instance=ExtResource("5_fjysh")]
+position = Vector2(552, 400)
+
+[node name="Area2D2" parent="collecabels" unique_id=1496222105 instance=ExtResource("5_fjysh")]
+position = Vector2(994, 297)
+
+[node name="Area2D3" parent="collecabels" unique_id=950084283 instance=ExtResource("5_fjysh")]
+position = Vector2(1364, 388)
+
+[node name="Area2D4" parent="collecabels" unique_id=1038952355 instance=ExtResource("5_fjysh")]
+position = Vector2(1679, 347)
+
+[node name="Area2D5" parent="collecabels" unique_id=891025419 instance=ExtResource("5_fjysh")]
+position = Vector2(1587, 157)
+
+[node name="Area2D6" parent="collecabels" unique_id=819841351 instance=ExtResource("5_fjysh")]
+position = Vector2(1004, 62)
+
+[node name="Area2D7" parent="collecabels" unique_id=1106544514 instance=ExtResource("5_fjysh")]
+position = Vector2(1220, 157)
+
+[node name="Area2D8" parent="collecabels" unique_id=2022267819 instance=ExtResource("5_fjysh")]
+position = Vector2(145, 36)
+
+[node name="Area2D9" parent="collecabels" unique_id=1860852731 instance=ExtResource("5_fjysh")]
+position = Vector2(1960, 169)
+
+[node name="Area2D10" parent="collecabels" unique_id=2093990880 instance=ExtResource("5_fjysh")]
+position = Vector2(2210, 105)
+
+[node name="Area2D11" parent="collecabels" unique_id=779888660 instance=ExtResource("5_fjysh")]
+position = Vector2(2455, 66)
+
+[node name="Area2D12" parent="collecabels" unique_id=1606067276 instance=ExtResource("5_fjysh")]
+position = Vector2(2535, 207)
+
+[node name="Area2D13" parent="collecabels" unique_id=1345999597 instance=ExtResource("5_fjysh")]
+position = Vector2(2209, 360)
