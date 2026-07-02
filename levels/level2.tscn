@@ -1,15 +1,17 @@
 [gd_scene format=4 uid="uid://o7p8kfgowou6"]
 
 [ext_resource type="Texture2D" uid="uid://bu0wbi7tacnuq" path="res://world/back ground/Brown.png" id="1_76ugp"]
-[ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/new_tile_set.tres" id="2_55gdq"]
+[ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/stuff/new_tile_set.tres" id="2_55gdq"]
 [ext_resource type="PackedScene" uid="uid://csfr1abmxaaih" path="res://plyer/sceens/plyer.tscn" id="3_crte6"]
-[ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/game_manger.gd" id="4_hq01p"]
+[ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_hq01p"]
 [ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="5_fjysh"]
 [ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_bcewn"]
-[ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_6mfmt"]
+[ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_6mfmt"]
+[ext_resource type="Texture2D" uid="uid://bvqul4ai1qosd" path="res://world/stuff/heart.png" id="8_55gdq"]
 [ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="8_qegch"]
+[ext_resource type="PackedScene" uid="uid://dqqnx10q62u60" path="res://Enemy/enemy.tscn" id="10_crte6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8p81"]
 bg_color = Color(0.50980395, 1, 0.19607843, 1)
 border_width_left = 6
 border_width_top = 6
@@ -23,6 +25,20 @@ corner_radius_bottom_left = 6
 shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crte6"]
+bg_color = Color(1, 0.4166032, 0.34792536, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.3854925, 0.38549247, 0.38549247, 0.6)
+shadow_size = 3
+
 [node name="Node" type="Node" unique_id=31593673]
 
 [node name="sceen elemnts" type="Node" parent="." unique_id=166305142]
@@ -33,8 +49,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -103.0
-offset_right = 888.0
-offset_bottom = -347.0
+offset_right = 1800.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_76ugp")
@@ -50,7 +66,7 @@ tile_set = ExtResource("2_55gdq")
 position = Vector2(197, 351)
 
 [node name="Camera2D" type="Camera2D" parent="sceen elemnts/CharacterBody2D" unique_id=484815252]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = -144
 limit_right = 2832
@@ -65,14 +81,14 @@ position = Vector2(2689, 408)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
 
-[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1937296898]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 268.0
-offset_bottom = 95.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ffhad")
+[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1684900861]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 335.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e8p81")
 
-[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=804054561]
+[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=2011815426]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -85,23 +101,48 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_6mfmt")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 39
 text = "POINTS:0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=826673763]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=1166797829]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 15.0
-offset_top = -27.0
-offset_right = 72.0
-offset_bottom = 26.0
+offset_top = -37.5
+offset_right = 94.0
+offset_bottom = 37.0
 grow_vertical = 2
 texture = ExtResource("8_qegch")
 expand_mode = 1
+
+[node name="HEART" type="Panel" parent="CanvasLayer" unique_id=1327769074]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -129.0
+offset_top = 6.0
+offset_right = -7.0
+offset_bottom = 111.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_crte6")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HEART" unique_id=966797105]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_55gdq")
 
 [node name="collecabels" type="Node" parent="." unique_id=710241616]
 
@@ -110,9 +151,6 @@ position = Vector2(552, 400)
 
 [node name="Area2D2" parent="collecabels" unique_id=1496222105 instance=ExtResource("5_fjysh")]
 position = Vector2(994, 297)
-
-[node name="Area2D3" parent="collecabels" unique_id=950084283 instance=ExtResource("5_fjysh")]
-position = Vector2(1364, 388)
 
 [node name="Area2D4" parent="collecabels" unique_id=1038952355 instance=ExtResource("5_fjysh")]
 position = Vector2(1679, 347)
@@ -123,14 +161,8 @@ position = Vector2(1587, 157)
 [node name="Area2D6" parent="collecabels" unique_id=819841351 instance=ExtResource("5_fjysh")]
 position = Vector2(1004, 62)
 
-[node name="Area2D7" parent="collecabels" unique_id=1106544514 instance=ExtResource("5_fjysh")]
-position = Vector2(1220, 157)
-
 [node name="Area2D8" parent="collecabels" unique_id=2022267819 instance=ExtResource("5_fjysh")]
 position = Vector2(145, 36)
-
-[node name="Area2D9" parent="collecabels" unique_id=1860852731 instance=ExtResource("5_fjysh")]
-position = Vector2(1960, 169)
 
 [node name="Area2D10" parent="collecabels" unique_id=2093990880 instance=ExtResource("5_fjysh")]
 position = Vector2(2210, 105)
@@ -141,5 +173,22 @@ position = Vector2(2455, 66)
 [node name="Area2D12" parent="collecabels" unique_id=1606067276 instance=ExtResource("5_fjysh")]
 position = Vector2(2535, 207)
 
-[node name="Area2D13" parent="collecabels" unique_id=1345999597 instance=ExtResource("5_fjysh")]
-position = Vector2(2209, 360)
+[node name="Enemys" type="Node" parent="." unique_id=403167597]
+
+[node name="enemy" parent="Enemys" unique_id=1642659612 instance=ExtResource("10_crte6")]
+position = Vector2(1951, 161)
+
+[node name="enemy2" parent="Enemys" unique_id=1876013529 instance=ExtResource("10_crte6")]
+position = Vector2(1211, 159)
+
+[node name="enemy3" parent="Enemys" unique_id=1480041742 instance=ExtResource("10_crte6")]
+position = Vector2(542, 15)
+
+[node name="enemy4" parent="Enemys" unique_id=999503734 instance=ExtResource("10_crte6")]
+position = Vector2(774, 355)
+
+[node name="enemy5" parent="Enemys" unique_id=744629674 instance=ExtResource("10_crte6")]
+position = Vector2(1354, 398)
+
+[node name="enemy" parent="." unique_id=1811224258 instance=ExtResource("10_crte6")]
+position = Vector2(2197, 351)

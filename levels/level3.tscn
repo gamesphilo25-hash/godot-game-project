@@ -1,0 +1,140 @@
+[gd_scene format=4 uid="uid://gihwb8aekn3b"]
+
+[ext_resource type="Texture2D" uid="uid://4itu1ddygm6w" path="res://world/back ground/Green.png" id="1_cpuyl"]
+[ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/stuff/new_tile_set.tres" id="2_mf7v1"]
+[ext_resource type="PackedScene" uid="uid://csfr1abmxaaih" path="res://plyer/sceens/plyer.tscn" id="3_7trqu"]
+[ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_o0ax4"]
+[ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="9_c750c"]
+[ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="10_283cd"]
+[ext_resource type="Texture2D" uid="uid://bvqul4ai1qosd" path="res://world/stuff/heart.png" id="11_ulrxl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
+bg_color = Color(0.50980395, 1, 0.19607843, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55gdq"]
+bg_color = Color(1, 0.4166032, 0.34792536, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.3854925, 0.38549247, 0.38549247, 0.6)
+shadow_size = 3
+
+[node name="Node" type="Node" unique_id=31593673]
+
+[node name="sceen elemnts" type="Node" parent="." unique_id=166305142]
+
+[node name="TextureRect" type="TextureRect" parent="sceen elemnts" unique_id=986876102]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 757.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cpuyl")
+stretch_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="sceen elemnts" unique_id=2107733799]
+texture_filter = 1
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("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")
+tile_set = ExtResource("2_mf7v1")
+
+[node name="game manger" type="Node" parent="sceen elemnts" unique_id=100583520]
+unique_name_in_owner = true
+script = ExtResource("4_o0ax4")
+
+[node name="CharacterBody2D" parent="sceen elemnts" unique_id=162145697 instance=ExtResource("3_7trqu")]
+position = Vector2(118, 871)
+
+[node name="Camera2D" type="Camera2D" parent="sceen elemnts/CharacterBody2D" unique_id=578462800]
+position = Vector2(1, 0)
+zoom = Vector2(2, 2)
+limit_left = -48
+limit_top = -48
+limit_right = 2688
+limit_bottom = 962
+position_smoothing_speed = 7.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
+
+[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1937296898]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 335.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ffhad")
+
+[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=804054561]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 1.0
+offset_right = 32.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_c750c")
+theme_override_font_sizes/font_size = 39
+text = "POINTS:0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=826673763]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -37.5
+offset_right = 94.0
+offset_bottom = 37.0
+grow_vertical = 2
+texture = ExtResource("10_283cd")
+expand_mode = 1
+
+[node name="HEART" type="Panel" parent="CanvasLayer" unique_id=1904857583]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -129.0
+offset_top = 6.0
+offset_right = -7.0
+offset_bottom = 111.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_55gdq")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HEART" unique_id=1438578637]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ulrxl")

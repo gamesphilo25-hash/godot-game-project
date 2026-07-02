@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c54rwkd107n0i"
-path="res://.godot/imported/Terrain (16x16).png-350356dbe8cd269d39275bb36de5dda8.ctex"
+uid="uid://codvd000i6ugk"
+path="res://.godot/imported/half heart.png-3941959602fc09dc3647893d71d3639c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/Terrain (16x16).png"
-dest_files=["res://.godot/imported/Terrain (16x16).png-350356dbe8cd269d39275bb36de5dda8.ctex"]
+source_file="res://world/stuff/half heart.png"
+dest_files=["res://.godot/imported/half heart.png-3941959602fc09dc3647893d71d3639c.ctex"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bhgngindvjfsf"
-path="res://.godot/imported/ArchivoBlack-Regular.ttf-b5f8c35ad3a96d58ca248b5af8a5f215.fontdata"
+uid="uid://dttdvx7wo0fay"
+path="res://.godot/imported/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-b3b54cb8a16ba40216ae097014dd0856.fontdata"
 
 [deps]
 
-source_file="res://world/ArchivoBlack-Regular.ttf"
-dest_files=["res://.godot/imported/ArchivoBlack-Regular.ttf-b5f8c35ad3a96d58ca248b5af8a5f215.fontdata"]
+source_file="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf"
+dest_files=["res://.godot/imported/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-b3b54cb8a16ba40216ae097014dd0856.fontdata"]
 
 [params]
 
