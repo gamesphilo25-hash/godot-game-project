@@ -6,7 +6,7 @@
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=120141379]
 texture_filter = 1
-position = Vector2(4618, 576.00006)
+position = Vector2(4086.0002, 504.00006)
 scale = Vector2(25.090912, 23.386362)
 texture = ExtResource("1_jmetg")
 
