@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bb2svr6hfubvm"]
 
-[ext_resource type="Script" uid="uid://c5eiwon3h56lg" path="res://world/stuff/main_menue.gd" id="1_bqcfs"]
+[ext_resource type="Script" uid="uid://c5eiwon3h56lg" path="res://UI/main_menue.gd" id="1_bqcfs"]
 [ext_resource type="Texture2D" uid="uid://4itu1ddygm6w" path="res://world/back ground/Green.png" id="2_ivn5n"]
 [ext_resource type="FontFile" uid="uid://bhgngindvjfsf" path="res://world/stuff/ArchivoBlack-Regular.ttf" id="3_s6y1a"]
 

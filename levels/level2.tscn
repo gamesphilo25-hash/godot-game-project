@@ -6,10 +6,11 @@
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_hq01p"]
 [ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="5_fjysh"]
 [ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_bcewn"]
+[ext_resource type="PackedScene" uid="uid://bb2svr6hfubvm" path="res://UI/main menue.tscn" id="6_fjysh"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_6mfmt"]
-[ext_resource type="Texture2D" uid="uid://bvqul4ai1qosd" path="res://world/stuff/heart.png" id="8_55gdq"]
 [ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="8_qegch"]
 [ext_resource type="PackedScene" uid="uid://dqqnx10q62u60" path="res://Enemy/enemy.tscn" id="10_crte6"]
+[ext_resource type="PackedScene" uid="uid://cndnuk5ddw02k" path="res://UI/pause.tscn" id="11_hq01p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8p81"]
 bg_color = Color(0.50980395, 1, 0.19607843, 1)
@@ -24,20 +25,6 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
 shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crte6"]
-bg_color = Color(1, 0.4166032, 0.34792536, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.3854925, 0.38549247, 0.38549247, 0.6)
-shadow_size = 3
 
 [node name="Node" type="Node" unique_id=31593673]
 
@@ -78,6 +65,53 @@ script = ExtResource("4_hq01p")
 
 [node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_bcewn")]
 position = Vector2(2689, 408)
+target_sceen = ExtResource("6_fjysh")
+
+[node name="Enemys" type="Node" parent="sceen elemnts" unique_id=403167597]
+
+[node name="enemy3" parent="sceen elemnts/Enemys" unique_id=1642659612 instance=ExtResource("10_crte6")]
+position = Vector2(786, 356)
+
+[node name="enemy2" parent="sceen elemnts/Enemys" unique_id=1876013529 instance=ExtResource("10_crte6")]
+position = Vector2(1227, 162)
+
+[node name="enemy5" parent="sceen elemnts/Enemys" unique_id=744629674 instance=ExtResource("10_crte6")]
+position = Vector2(1368, 403)
+
+[node name="enemy" parent="sceen elemnts/Enemys" unique_id=1811224258 instance=ExtResource("10_crte6")]
+position = Vector2(2247, 354)
+
+[node name="collecabels" type="Node" parent="sceen elemnts" unique_id=710241616]
+
+[node name="Area2D" parent="sceen elemnts/collecabels" unique_id=1856683621 instance=ExtResource("5_fjysh")]
+position = Vector2(552, 400)
+
+[node name="Area2D2" parent="sceen elemnts/collecabels" unique_id=1496222105 instance=ExtResource("5_fjysh")]
+position = Vector2(994, 297)
+
+[node name="Area2D4" parent="sceen elemnts/collecabels" unique_id=1038952355 instance=ExtResource("5_fjysh")]
+position = Vector2(1679, 347)
+
+[node name="Area2D5" parent="sceen elemnts/collecabels" unique_id=891025419 instance=ExtResource("5_fjysh")]
+position = Vector2(1587, 157)
+
+[node name="Area2D6" parent="sceen elemnts/collecabels" unique_id=819841351 instance=ExtResource("5_fjysh")]
+position = Vector2(1004, 62)
+
+[node name="Area2D8" parent="sceen elemnts/collecabels" unique_id=2022267819 instance=ExtResource("5_fjysh")]
+position = Vector2(145, 36)
+
+[node name="Area2D10" parent="sceen elemnts/collecabels" unique_id=2093990880 instance=ExtResource("5_fjysh")]
+position = Vector2(2210, 105)
+
+[node name="Area2D11" parent="sceen elemnts/collecabels" unique_id=779888660 instance=ExtResource("5_fjysh")]
+position = Vector2(2455, 66)
+
+[node name="Area2D12" parent="sceen elemnts/collecabels" unique_id=1606067276 instance=ExtResource("5_fjysh")]
+position = Vector2(2535, 207)
+
+[node name="Area2D13" parent="sceen elemnts/collecabels" unique_id=326768051 instance=ExtResource("5_fjysh")]
+position = Vector2(2763, 74)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
 
@@ -119,76 +153,4 @@ grow_vertical = 2
 texture = ExtResource("8_qegch")
 expand_mode = 1
 
-[node name="HEART" type="Panel" parent="CanvasLayer" unique_id=1327769074]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -129.0
-offset_top = 6.0
-offset_right = -7.0
-offset_bottom = 111.0
-grow_horizontal = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_crte6")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HEART" unique_id=966797105]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 7.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_55gdq")
-
-[node name="collecabels" type="Node" parent="." unique_id=710241616]
-
-[node name="Area2D" parent="collecabels" unique_id=1856683621 instance=ExtResource("5_fjysh")]
-position = Vector2(552, 400)
-
-[node name="Area2D2" parent="collecabels" unique_id=1496222105 instance=ExtResource("5_fjysh")]
-position = Vector2(994, 297)
-
-[node name="Area2D4" parent="collecabels" unique_id=1038952355 instance=ExtResource("5_fjysh")]
-position = Vector2(1679, 347)
-
-[node name="Area2D5" parent="collecabels" unique_id=891025419 instance=ExtResource("5_fjysh")]
-position = Vector2(1587, 157)
-
-[node name="Area2D6" parent="collecabels" unique_id=819841351 instance=ExtResource("5_fjysh")]
-position = Vector2(1004, 62)
-
-[node name="Area2D8" parent="collecabels" unique_id=2022267819 instance=ExtResource("5_fjysh")]
-position = Vector2(145, 36)
-
-[node name="Area2D10" parent="collecabels" unique_id=2093990880 instance=ExtResource("5_fjysh")]
-position = Vector2(2210, 105)
-
-[node name="Area2D11" parent="collecabels" unique_id=779888660 instance=ExtResource("5_fjysh")]
-position = Vector2(2455, 66)
-
-[node name="Area2D12" parent="collecabels" unique_id=1606067276 instance=ExtResource("5_fjysh")]
-position = Vector2(2535, 207)
-
-[node name="Enemys" type="Node" parent="." unique_id=403167597]
-
-[node name="enemy" parent="Enemys" unique_id=1642659612 instance=ExtResource("10_crte6")]
-position = Vector2(1951, 161)
-
-[node name="enemy2" parent="Enemys" unique_id=1876013529 instance=ExtResource("10_crte6")]
-position = Vector2(1211, 159)
-
-[node name="enemy3" parent="Enemys" unique_id=1480041742 instance=ExtResource("10_crte6")]
-position = Vector2(542, 15)
-
-[node name="enemy4" parent="Enemys" unique_id=999503734 instance=ExtResource("10_crte6")]
-position = Vector2(774, 355)
-
-[node name="enemy5" parent="Enemys" unique_id=744629674 instance=ExtResource("10_crte6")]
-position = Vector2(1354, 398)
-
-[node name="enemy" parent="." unique_id=1811224258 instance=ExtResource("10_crte6")]
-position = Vector2(2197, 351)
+[node name="pause" parent="CanvasLayer" unique_id=432055490 instance=ExtResource("11_hq01p")]

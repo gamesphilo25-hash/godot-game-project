@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_o0ax4"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="9_c750c"]
 [ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="10_283cd"]
-[ext_resource type="Texture2D" uid="uid://bvqul4ai1qosd" path="res://world/stuff/heart.png" id="11_ulrxl"]
+[ext_resource type="Texture2D" uid="uid://bvqul4ai1qosd" path="res://UI/heart.png" id="11_ulrxl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
 bg_color = Color(0.50980395, 1, 0.19607843, 1)

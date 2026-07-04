@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://53ngcr7dt7t3"
-path="res://.godot/imported/black heart.png-19d07d4ca2e965524c2a71c284231450.ctex"
+uid="uid://codvd000i6ugk"
+path="res://.godot/imported/half heart.png-32630a14334e5c875c04ae65fcda5400.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/stuff/black heart.png"
-dest_files=["res://.godot/imported/black heart.png-19d07d4ca2e965524c2a71c284231450.ctex"]
+source_file="res://UI/half heart.png"
+dest_files=["res://.godot/imported/half heart.png-32630a14334e5c875c04ae65fcda5400.ctex"]
 
 [params]
 

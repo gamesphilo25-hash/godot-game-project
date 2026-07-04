@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://rbfoqtur1d1d"]
+
+[ext_resource type="Texture2D" uid="uid://blrjmn4vnn1k6" path="res://UI/New Piskel.png" id="1_jmetg"]
+
+[node name="transtions" type="CanvasLayer" unique_id=28610164]
+
+[node name="Transition" type="Sprite2D" parent="." unique_id=120141379]
+texture_filter = 1
+position = Vector2(4618, 576.00006)
+scale = Vector2(25.090912, 23.386362)
+texture = ExtResource("1_jmetg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=867458729]
