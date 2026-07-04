@@ -13,6 +13,9 @@ config_version=5
 config/name="game"
 run/main_scene="uid://bb2svr6hfubvm"
 config/features=PackedStringArray("4.7", "Mobile")
+boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 0)
+boot_splash/show_image=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [display]
