@@ -2,6 +2,7 @@ extends Node
 
 var points = 0
 @onready var label: Label = %Label
+
 var lives = 1
 
 func decrease_health():
