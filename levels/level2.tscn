@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dqqnx10q62u60" path="res://Enemy/enemy.tscn" id="10_crte6"]
 [ext_resource type="PackedScene" uid="uid://cndnuk5ddw02k" path="res://UI/pause.tscn" id="11_hq01p"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8p81"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hq01p"]
 bg_color = Color(0.50980395, 1, 0.19607843, 1)
 border_width_left = 6
 border_width_top = 6
@@ -64,7 +64,7 @@ unique_name_in_owner = true
 script = ExtResource("4_hq01p")
 
 [node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_bcewn")]
-position = Vector2(2689, 408)
+position = Vector2(2688, 408)
 target_sceen = ExtResource("6_fjysh")
 
 [node name="Enemys" type="Node" parent="sceen elemnts" unique_id=403167597]
@@ -113,16 +113,16 @@ position = Vector2(2535, 207)
 [node name="Area2D13" parent="sceen elemnts/collecabels" unique_id=326768051 instance=ExtResource("5_fjysh")]
 position = Vector2(2763, 74)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=239540954]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1685919604]
 
-[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1684900861]
+[node name="main panel" type="Panel" parent="CanvasLayer" unique_id=1072527308]
 offset_left = 9.0
 offset_top = 7.0
 offset_right = 335.0
 offset_bottom = 112.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_e8p81")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hq01p")
 
-[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=2011815426]
+[node name="Label" type="Label" parent="CanvasLayer/main panel" unique_id=1564021137]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -140,7 +140,7 @@ text = "POINTS:0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=1166797829]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/main panel" unique_id=869888587]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5

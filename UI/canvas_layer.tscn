@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cdyui5vl600vc"]
+
+[ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="1_bfbsr"]
+[ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="2_rxn48"]
+[ext_resource type="PackedScene" uid="uid://cndnuk5ddw02k" path="res://UI/pause.tscn" id="3_5xc7t"]
+[ext_resource type="Texture2D" uid="uid://dueohcohekhw3" path="res://icon.svg" id="4_rxn48"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8p81"]
+bg_color = Color(0.50980395, 1, 0.19607843, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
+shadow_size = 5
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1795012638]
+
+[node name="main panel" type="Panel" parent="." unique_id=1825308608]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 335.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e8p81")
+
+[node name="Label" type="Label" parent="main panel" unique_id=826539608]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 1.0
+offset_right = 32.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_bfbsr")
+theme_override_font_sizes/font_size = 39
+text = "POINTS:0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="main panel" unique_id=1484073824]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -37.5
+offset_right = 94.0
+offset_bottom = 37.0
+grow_vertical = 2
+texture = ExtResource("2_rxn48")
+expand_mode = 1
+
+[node name="pause" parent="." unique_id=432055490 instance=ExtResource("3_5xc7t")]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1964719268]
+position = Vector2(95, 841)
+scale = Vector2(1.1640626, 1.0390625)
+texture_normal = ExtResource("4_rxn48")
+action = "right"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="." unique_id=813969464]
+position = Vector2(270.99997, 850.99994)
+scale = Vector2(1.2421876, 1.0390626)
+texture_normal = ExtResource("4_rxn48")
+action = "LEFT"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="." unique_id=1776068047]
+position = Vector2(183.00002, 625)
+scale = Vector2(1.2578126, 1.2812501)
+texture_normal = ExtResource("4_rxn48")
+action = "jump"

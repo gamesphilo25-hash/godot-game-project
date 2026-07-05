@@ -1,13 +1,71 @@
 [gd_scene format=3 uid="uid://rbfoqtur1d1d"]
 
+[ext_resource type="Script" uid="uid://h6t1ilvq280o" path="res://UI/transtions.gd" id="1_ixohl"]
 [ext_resource type="Texture2D" uid="uid://blrjmn4vnn1k6" path="res://UI/New Piskel.png" id="1_jmetg"]
 
+[sub_resource type="Animation" id="Animation_ixohl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4141, 507)]
+}
+
+[sub_resource type="Animation" id="Animation_tcbo8"]
+resource_name = "in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4141, 507), Vector2(955.00024, 507)]
+}
+
+[sub_resource type="Animation" id="Animation_3qbgo"]
+resource_name = "out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(955.00024, 507), Vector2(-2194.9998, 507)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2r6he"]
+_data = {
+&"RESET": SubResource("Animation_ixohl"),
+&"in": SubResource("Animation_tcbo8"),
+&"out": SubResource("Animation_3qbgo")
+}
+
 [node name="transtions" type="CanvasLayer" unique_id=28610164]
+process_mode = 3
+script = ExtResource("1_ixohl")
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=120141379]
 texture_filter = 1
-position = Vector2(4086.0002, 504.00006)
+position = Vector2(4141, 507)
 scale = Vector2(25.090912, 23.386362)
 texture = ExtResource("1_jmetg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=867458729]
+libraries/ = SubResource("AnimationLibrary_2r6he")
