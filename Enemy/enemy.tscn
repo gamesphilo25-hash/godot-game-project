@@ -110,7 +110,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fgfm"]
-size = Vector2(86, 54)
+size = Vector2(66, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffhad"]
 size = Vector2(88, 55)
@@ -125,7 +125,7 @@ sprite_frames = SubResource("SpriteFrames_ffhad")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2086176697]
-position = Vector2(1, 1)
+position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_2fgfm")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=525287901]
