@@ -114,7 +114,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_f7u7y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jq2cn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_a5s8o")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ls4ot")
-text = "GO back to the main menu"
+text = "Exit"
 
 [node name="Button3" type="Button" parent="pause menue/VBoxContainer" unique_id=929353906]
 process_mode = 3
