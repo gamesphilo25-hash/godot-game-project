@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_hq01p"]
 [ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="5_fjysh"]
 [ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_bcewn"]
-[ext_resource type="PackedScene" uid="uid://bb2svr6hfubvm" path="res://UI/main menue.tscn" id="6_fjysh"]
+[ext_resource type="PackedScene" uid="uid://gihwb8aekn3b" path="res://levels/level3.tscn" id="6_hq01p"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_6mfmt"]
 [ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="8_qegch"]
 [ext_resource type="PackedScene" uid="uid://dqqnx10q62u60" path="res://Enemy/enemy.tscn" id="10_crte6"]
@@ -65,7 +65,7 @@ script = ExtResource("4_hq01p")
 
 [node name="win trophy" parent="sceen elemnts" unique_id=1889917194 instance=ExtResource("6_bcewn")]
 position = Vector2(2688, 408)
-target_sceen = ExtResource("6_fjysh")
+target_sceen = ExtResource("6_hq01p")
 
 [node name="Enemys" type="Node" parent="sceen elemnts" unique_id=403167597]
 

@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_o0ax4"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="9_c750c"]
 [ext_resource type="Texture2D" uid="uid://bclsoqepuhifd" path="res://world/stuff/cloectables/watermelon.svg" id="10_283cd"]
-[ext_resource type="Texture2D" uid="uid://bvqul4ai1qosd" path="res://UI/heart.png" id="11_ulrxl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffhad"]
 bg_color = Color(0.50980395, 1, 0.19607843, 1)
@@ -21,20 +20,6 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 shadow_color = Color(0.25449643, 0.25449646, 0.25449637, 0.6)
 shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55gdq"]
-bg_color = Color(1, 0.4166032, 0.34792536, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.3854925, 0.38549247, 0.38549247, 0.6)
-shadow_size = 3
 
 [node name="Node" type="Node" unique_id=31593673]
 
@@ -113,28 +98,3 @@ offset_bottom = 37.0
 grow_vertical = 2
 texture = ExtResource("10_283cd")
 expand_mode = 1
-
-[node name="HEART" type="Panel" parent="CanvasLayer" unique_id=1904857583]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -129.0
-offset_top = 6.0
-offset_right = -7.0
-offset_bottom = 111.0
-grow_horizontal = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_55gdq")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HEART" unique_id=1438578637]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 7.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_ulrxl")
