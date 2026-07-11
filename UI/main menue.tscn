@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c5eiwon3h56lg" path="res://UI/main_menue.gd" id="1_bqcfs"]
 [ext_resource type="Texture2D" uid="uid://4itu1ddygm6w" path="res://world/back ground/Green.png" id="2_ivn5n"]
 [ext_resource type="FontFile" uid="uid://bhgngindvjfsf" path="res://world/stuff/ArchivoBlack-Regular.ttf" id="3_s6y1a"]
+[ext_resource type="Texture2D" uid="uid://dueohcohekhw3" path="res://icon.svg" id="4_2ld7u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lutp1"]
 bg_color = Color(1, 1, 1, 1)
@@ -66,7 +67,7 @@ grow_vertical = 2
 texture = ExtResource("2_ivn5n")
 stretch_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=152161578]
+[node name="main" type="VBoxContainer" parent="." unique_id=152161578]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -80,7 +81,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 22
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1632409302]
+[node name="Button" type="Button" parent="main" unique_id=1632409302]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -95,7 +96,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1v6ux")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tg0kw")
 text = "start game"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=38691196]
+[node name="Button2" type="Button" parent="main" unique_id=38691196]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -110,7 +111,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1v6ux")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tg0kw")
 text = "opption"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1645535563]
+[node name="Button3" type="Button" parent="main" unique_id=1645535563]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -125,6 +126,49 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1v6ux")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tg0kw")
 text = "exit"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_setteings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
+[node name="oppions" type="Panel" parent="." unique_id=355915011]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -770.5
+offset_top = -316.5
+offset_right = 827.5
+offset_bottom = 419.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button3" type="Button" parent="oppions" unique_id=1304749482]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 510.0
+offset_top = -209.0
+offset_right = 734.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_s6y1a")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lutp1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tg0kw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1v6ux")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tg0kw")
+text = "yyyy"
+icon = ExtResource("4_2ld7u")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="main/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="main/Button2" to="." method="_on_setteings_pressed"]
+[connection signal="pressed" from="main/Button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="oppions/Button3" to="." method="_on_back_pressed"]
