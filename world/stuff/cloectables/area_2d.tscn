@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csg6k63ky13pa" path="res://world/stuff/cloectables/area_2d.gd" id="1_d2jtk"]
 [ext_resource type="Texture2D" uid="uid://cb72lj6jq6pc2" path="res://world/stuff/cloectables/Melon.png" id="1_n6ulx"]
+[ext_resource type="AudioStream" uid="uid://d1x5xdr23v0x" path="res://sounds/pickupCoin.wav" id="3_e685y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1xgel"]
 atlas = ExtResource("1_n6ulx")
@@ -144,5 +145,8 @@ animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2036694306]
 shape = SubResource("CircleShape2D_l3t3h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1353407385]
+stream = ExtResource("3_e685y")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

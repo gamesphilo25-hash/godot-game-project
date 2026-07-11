@@ -4,11 +4,13 @@ var points = 0
 @onready var label: Label = %Label
 
 
+	
+
+
 var lives = 1
 
 func decrease_health():
 	lives -= 1
-	print(lives)
 	if lives == 0:
 		Transtions.die()
 

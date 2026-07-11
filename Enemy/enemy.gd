@@ -6,13 +6,17 @@ extends RigidBody2D
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	
 	if body.is_in_group("plyer"):
-		var y_delta = position.y - body.position.y
+		var y_delta = global_position.y - body.global_position.y
 		print(y_delta)
-		if y_delta > 48:
-			print("destroy enemy")
+		if y_delta > 53:
+			_detach_and_play($hit)
 			queue_free()
 		else:
-			print("decrease plyer health")
 			game_manger.decrease_health()
+			$hurt.play()
+
+func _detach_and_play(sound) -> void:
+	sound.reparent(get_tree().root)
+	sound.play()
+	sound.finished.connect(sound.queue_free)

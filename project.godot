@@ -18,9 +18,15 @@ boot_splash/show_image=false
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://d3p6onew80nrs"
+
 [autoload]
 
 Transtions="*uid://rbfoqtur1d1d"
+BackgroundMusic="*uid://bgr4ut0h0egt8"
+GameManger="*uid://coth1oxeymmno"
 
 [display]
 
