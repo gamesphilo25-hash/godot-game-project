@@ -208,3 +208,4 @@ shape = SubResource("RectangleShape2D_rlkh8")
 [node name="jump" type="AudioStreamPlayer2D" parent="." unique_id=1276943539]
 stream = ExtResource("5_rlkh8")
 volume_db = -7.0
+bus = &"sfx"

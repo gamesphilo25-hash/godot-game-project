@@ -6,4 +6,4 @@
 process_mode = 3
 stream = ExtResource("1_0glsq")
 autoplay = true
-bus = &"New Bus"
+bus = &"music"

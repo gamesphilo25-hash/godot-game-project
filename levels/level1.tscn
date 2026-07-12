@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4itu1ddygm6w" path="res://world/back ground/Green.png" id="1_hxib8"]
 [ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/stuff/new_tile_set.tres" id="2_0ei1v"]
 [ext_resource type="PackedScene" uid="uid://csfr1abmxaaih" path="res://plyer/sceens/plyer.tscn" id="3_edc2v"]
-[ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="4_p6jff"]
+[ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/melon.tscn" id="4_p6jff"]
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="5_lo833"]
 [ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_0ei1v"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_edc2v"]
@@ -61,7 +61,7 @@ zoom = Vector2(2, 2)
 limit_left = -48
 limit_top = -48
 limit_right = 2352
-limit_bottom = 722
+limit_bottom = 720
 position_smoothing_speed = 7.0
 
 [node name="game manger" type="Node" parent="sceen elemnts" unique_id=100583520]

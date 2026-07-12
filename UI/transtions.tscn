@@ -64,7 +64,7 @@ script = ExtResource("1_ixohl")
 [node name="Transition" type="Sprite2D" parent="." unique_id=120141379]
 texture_filter = 1
 position = Vector2(4141, 507)
-scale = Vector2(25.090912, 23.386362)
+scale = Vector2(22.209303, 31.613638)
 texture = ExtResource("1_jmetg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=867458729]

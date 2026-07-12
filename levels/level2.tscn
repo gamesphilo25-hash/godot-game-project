@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://cpwspc03p0d0u" path="res://world/stuff/new_tile_set.tres" id="2_55gdq"]
 [ext_resource type="PackedScene" uid="uid://csfr1abmxaaih" path="res://plyer/sceens/plyer.tscn" id="3_crte6"]
 [ext_resource type="Script" uid="uid://coth1oxeymmno" path="res://world/stuff/game_manger.gd" id="4_hq01p"]
-[ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/area_2d.tscn" id="5_fjysh"]
+[ext_resource type="PackedScene" uid="uid://btlcgxy65sf23" path="res://world/stuff/cloectables/melon.tscn" id="5_fjysh"]
 [ext_resource type="PackedScene" uid="uid://fsg1cu0l8hvn" path="res://world/stuff/win trophy/win_trophy.tscn" id="6_bcewn"]
 [ext_resource type="PackedScene" uid="uid://gihwb8aekn3b" path="res://levels/level3.tscn" id="6_hq01p"]
 [ext_resource type="FontFile" uid="uid://dttdvx7wo0fay" path="res://world/stuff/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="7_6mfmt"]
